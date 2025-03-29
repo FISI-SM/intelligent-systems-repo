@@ -21,10 +21,16 @@ cd 2.1-HelloAgent
 javac -cp .;../jade.jar HelloAgent.java
 ```
 
-## ▶️ Run the Agent
+## ▶️ Run the Agent without GUI
 
 ```bash
 java -cp .:../jade.jar jade.Boot -agents "hello:HelloAgent"
+```
+
+## ▶️ Run the Agent with GUI
+
+```bash
+java -cp .:../jade.jar jade.Boot -gui -agents "hello:HelloAgent"
 ```
 
 This starts a JADE container with an agent named `hello` of class `HelloAgent`.
