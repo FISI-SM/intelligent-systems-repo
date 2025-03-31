@@ -28,7 +28,7 @@ public class App {
 		AgentContainer ac = Runtime.instance().createMainContainer(p);
 
 		try {
-			ac.acceptNewAgent("MyAgentMqtt", new MyAgent()).start();
+			ac.acceptNewAgent("MyAgent", new MyAgent()).start();
 			//ac.acceptNewAgent("Hello", new HelloAgent()).start();
 			//ac.acceptNewAgent("Hi", new HelloAgent()).start();
 		} catch (StaleProxyException e) {

@@ -5,7 +5,7 @@
          
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.icmc.lasdpc</groupId>
+    <groupId>pe.edu.fisi</groupId>
     <artifactId>AgentProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
