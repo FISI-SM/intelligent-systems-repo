@@ -1,0 +1,12 @@
+venv/
+mlruns/
+outputs/
+__pycache__/
+*.pyc
+
+
+venv_python3/
+mlruns/
+outputs/
+data/
+backend.db

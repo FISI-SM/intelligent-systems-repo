@@ -1,0 +1,7 @@
+name: demo_mlflow
+entry_points:
+  main:
+    parameters:
+      l_rate: {type: float, default: 0.01}
+      max_iter: {type: int, default: 100}
+    command: "python scripts/train.py --l_rate {l_rate} --iter {max_iter}"
