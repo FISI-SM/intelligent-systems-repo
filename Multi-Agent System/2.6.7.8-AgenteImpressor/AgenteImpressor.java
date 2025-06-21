@@ -1,5 +1,16 @@
-import jade.core.Agent;
+/**
+ * To compile this code:
+ * Commpile and run in Linux
+ * $ javac -d out -cp "../jade.jar" *.java
+ * $ java -cp ".:../jade.jar:out" jade.Boot -agents "agentA:AgenteImpressor"
+ * $ java -cp ".:../jade.jar:out" jade.Boot -agents "agentA:AgenteImpressor" #without GUI
+ * $ java -cp ".:../jade.jar:out" jade.Boot -gui -agents "agentA:AgenteImpressor" #with GUI
+ * Compile in Windows
+ * $ javac -d out -cp "..\jade.jar" *.java 
+ * $ java -cp ".;..\jade.jar;out" jade.Boot -agents "agentA:AgenteImpressor"
+ **/
 
+import jade.core.Agent;
 
 public class AgenteImpressor  extends Agent {
 
