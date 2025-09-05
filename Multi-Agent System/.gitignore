@@ -1,0 +1,43 @@
+# -------------------------------------------------
+# Ignorar archivos de texto específicos
+APDescription.txt
+MTPs-Main-Container.txt
+
+# -------------------------------------------------
+# Archivos compilados de Java
+*.class
+
+# -------------------------------------------------
+# Directorios de salida comunes
+/out/
+/bin/
+/build/
+/target/
+
+# -------------------------------------------------
+# Archivos de configuración de IDEs
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VSCode
+.vscode/
+
+# -------------------------------------------------
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------------
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.swp
+*.bak
