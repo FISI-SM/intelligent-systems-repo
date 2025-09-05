@@ -1,14 +1,16 @@
-// ------------------------------------------------------------
-//   ParamAgent:   An Agent receiving parameters             
-//
-//   Usage:    % javac ParamAgent.java
-//             % java jade.Boot  fred:ParamAgent(3 "Allo there")
-//
-// ... on UNIX, the agent specifier and arguments must be quoted:
-//
-//             % java jade.Boot 'fred:ParamAgent(3 "Allo there")'
-// ------------------------------------------------------------
-
+/** ------------------------------------------------------------
+ *   ParamAgent:   An Agent receiving parameters             
+ *
+ *   Usage Linux:
+ * 		$ javac -cp .:../jade.jar ParamAgent.java
+ * 		$ java -cp .:../jade.jar jade.Boot -agents 'fred:ParamAgent(3 "Allo there")'
+ * 		$ java -cp .:../jade.jar jade.Boot -gui -agents 'fred:ParamAgent(3 "Allo there")'
+ *   On Windows
+ *   	$ javac -cp .;../jade.jar ParamAgent.java
+ *   	$ java -cp .;../jade.jar jade.Boot -agents fred:ParamAgent(3,"Allo there")
+ *   	$ java -cp .;../jade.jar jade.Boot -gui -agents fred:ParamAgent(3,"Allo there")
+ * ------------------------------------------------------------
+**/
  import jade.core.Agent;
 
  public class ParamAgent extends Agent 
@@ -26,8 +28,7 @@
 			int i = Integer.parseInt( (String) args[0] );
 			s     = (String) args[1];
 			
-			System.out.println("i*i= " + i*i);
-			System.exit(1);
+			System.out.println("i*i= " + i*i);			
 		}
 	}
  }

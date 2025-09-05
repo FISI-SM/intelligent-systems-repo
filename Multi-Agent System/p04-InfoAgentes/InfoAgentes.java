@@ -1,9 +1,24 @@
 /**
- * Para compilar este código:
- * $ javac HelloAgent.java
- * $ java -cp "jade.jar:classes:." jade.Boot -gui tuto:InfoAgentes
- * $ java -cp "jade.jar:classes:." jade.Boot -name plataforma-de-prueba Ivan:InfoAgentes
- **/
+ * ------------------------------------------------------------
+ *   InfoAgentes: Ejemplo para mostrar información del agente
+ *
+ *   Compilar en Windows:
+ *   $ javac -cp .;../jade.jar InfoAgentes.java
+ *
+ *   Compilar en Linux/Mac:
+ *   $ javac -cp .:../jade.jar InfoAgentes.java
+ *
+ *   Ejecutar en Linux/Mac:
+ *   $ java -cp .:../jade.jar jade.Boot -gui tuto:InfoAgentes
+ *   $ java -cp .:../jade.jar jade.Boot -name plataforma-de-prueba Ivan:InfoAgentes
+ *
+ *   Ejecutar en Windows (CMD o PowerShell):
+ *   $ java -cp .;../jade.jar jade.Boot -gui tuto:InfoAgentes
+ *   $ java -cp .;../jade.jar jade.Boot -name plataforma-de-prueba Ivan:InfoAgentes
+ *
+ * ------------------------------------------------------------
+ */
+
 import jade.core.Agent;
 import jade.core.AID;
 import java.util.Iterator;

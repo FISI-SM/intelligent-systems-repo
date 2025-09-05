@@ -1,10 +1,10 @@
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
 
-public class MeuComportamento extends Behaviour {
+public class MiComportamiento extends Behaviour {
     int i = 0;
 
-    public MeuComportamento(Agent a) {
+    public MiComportamiento(Agent a) {
         super(a);
     }
 

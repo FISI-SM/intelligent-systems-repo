@@ -1,3 +1,19 @@
+/**
+ * ------------------------------------------------------------
+ *   AgenteSequencial: Ejemplo de uso de SequentialBehaviour
+ *
+ *   Compilar y ejecutar en Windows:
+ *   $ javac -cp .;../jade.jar AgenteSequencial.java
+ *   $ java -cp .;../jade.jar jade.Boot -agents seq:AgenteSequencial
+ *   $ java -cp .;../jade.jar jade.Boot -gui -agents seq:AgenteSequencial
+ *
+ *   Compilar y ejecutar en Linux/Mac:
+ *   $ javac -cp .:../jade.jar AgenteSequencial.java
+ *   $ java -cp .:../jade.jar jade.Boot -agents 'seq:AgenteSequencial'
+ *   $ java -cp .:../jade.jar jade.Boot -gui -agents 'seq:AgenteSequencial'
+ * ------------------------------------------------------------
+ */
+
 import jade.core.Agent;
 import jade.core.behaviours.*;
 
@@ -46,7 +62,7 @@ public class AgenteSequencial extends Agent {
 		});
 
 		// activamos su ejecución
-		addBehaviour(comportamento);
+		addBehaviour(comportamiento);
 	}
 
 	protected void takeDown() {

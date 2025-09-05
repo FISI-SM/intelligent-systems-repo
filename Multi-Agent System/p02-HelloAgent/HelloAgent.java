@@ -6,7 +6,8 @@
  * $ java -cp .:../jade.jar jade.Boot -gui -agents "hello:HelloAgent" #with GUI
  * Compile in Windows
  * $ javac -cp .;../jade.jar HelloAgent.java 
- * $ 
+ * $ java -cp .;../jade.jar jade.Boot -agents "hello:HelloAgent"
+ * 
  **/
 
  import jade.core.Agent;
