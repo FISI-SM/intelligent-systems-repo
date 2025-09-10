@@ -3,8 +3,8 @@
  *
  *   Usage Linux:
  * 		$ javac -cp .:../jade.jar ParamAgent.java
- * 		$ java -cp .:../jade.jar jade.Boot -agents 'fred:ParamAgent(3 "Allo there")'
- * 		$ java -cp .:../jade.jar jade.Boot -gui -agents 'fred:ParamAgent(3 "Allo there")'
+ * 		$ java -cp .:../jade.jar jade.Boot -agents 'fred:ParamAgent(3, "Allo there")'
+ * 		$ java -cp .:../jade.jar jade.Boot -gui -agents 'fred:ParamAgent(3, "Allo there")'
  *   On Windows
  *   	$ javac -cp .;../jade.jar ParamAgent.java
  *   	$ java -cp .;../jade.jar jade.Boot -agents fred:ParamAgent(3,"Allo there")

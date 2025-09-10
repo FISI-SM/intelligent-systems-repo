@@ -18,6 +18,7 @@ import jade.core.Agent;
 import jade.core.behaviours.*;
 
 public class AgenteSequencial extends Agent {
+	
 	protected void setup() {
 		// mensaje de inicialización del agente
 		System.out.println("¡Hola! Mi nombre es " + getLocalName());

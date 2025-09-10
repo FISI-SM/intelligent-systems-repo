@@ -1,3 +1,18 @@
+/**
+ * ------------------------------------------------------------
+ *   Solicitante: Ejemplo para mostrar el uso de páginas amarillas
+ *
+ * Compilar y ejecutar en Linux:
+ * $ javac -d out -cp "../jade.jar" *.java
+ * $ java -cp ".:../jade.jar:out" jade.Boot -agents 'Raul:Solicitante("fuego")'
+ * 
+ * Compilar en Windows:
+ * $ javac -d out -cp "..\\jade.jar" *.java 
+ * $ java -cp ".;..\\jade.jar;out" jade.Boot -agents "Raul:Solicitante"
+ *
+ * ------------------------------------------------------------
+ */
+
 import jade.core.Agent;
 import jade.core.behaviours.*;
 import jade.core.AID;
@@ -13,8 +28,9 @@ public class Solicitante extends Agent {
         if (args != null && args.length > 0) {
             String argumento = (String) args[0];
 
+            System.out.println("Servicio solicitado: " + argumento);
             // Si el argumento es "fuego"
-            if (argumento.equalsIgnoreCase("fogo")) {
+            if (argumento.equalsIgnoreCase("fuego")) {
                 ServiceDescription servicio = new ServiceDescription();
                 // El servicio es apagar fuego
                 servicio.setType("apaga fuego");
@@ -23,7 +39,7 @@ public class Solicitante extends Agent {
             }
 
             // Si el argumento es "ladrón"
-            if (argumento.equalsIgnoreCase("ladrao")) {
+            if (argumento.equalsIgnoreCase("ladron")) {
                 ServiceDescription servicio = new ServiceDescription();
                 // El servicio es atrapar ladrones
                 servicio.setType("prende ladrón");
@@ -31,7 +47,7 @@ public class Solicitante extends Agent {
             }
 
             // Si el argumento es "enfermo"
-            if (argumento.equalsIgnoreCase("doente")) {
+            if (argumento.equalsIgnoreCase("enfermo")) {
                 ServiceDescription servicio = new ServiceDescription();
                 // El servicio es salvar vidas
                 servicio.setType("salva vidas");

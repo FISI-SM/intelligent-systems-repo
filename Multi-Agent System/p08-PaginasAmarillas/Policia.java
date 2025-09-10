@@ -6,17 +6,17 @@ import jade.domain.FIPAAgentManagement.*;
 import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 
-public class Policial extends Agent {
+public class Policia extends Agent {
 
     protected void setup() {
         // Descripción del servicio
         ServiceDescription servicio = new ServiceDescription();
         // Su servicio es atrapar ladrones
-        servicio.setType("prende ladrón");
+        servicio.setType("prende ladron");
         servicio.setName(this.getLocalName());
 
         registrarServicio(servicio);
-        recibirMensajes("ladrón", "Voy a atrapar al ladrón");
+        recibirMensajes("ladron", "Voy a atrapar al ladron");
     }
 
     // Método para registrar un servicio en las Páginas Amarillas de JADE
