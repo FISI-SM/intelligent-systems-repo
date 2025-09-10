@@ -6,17 +6,17 @@ import jade.core.AID;
 
 public class AgenteAlarmado2 extends Agent {
     protected void setup() {
-        // Comportamiento de una sola ejecución: envía un mensaje al agente Bombeiro
+        // Comportamiento de una sola ejecución: envía un mensaje al agente Bombero
         addBehaviour(new OneShotBehaviour(this) {
             public void action() {
                 ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-                msg.addReceiver(new AID("Bombeiro", AID.ISLOCALNAME));
+                msg.addReceiver(new AID("Bombero", AID.ISLOCALNAME));
                 msg.setLanguage("Portugués");
                 msg.setOntology("Emergencia");
                 msg.setContent("Fuego");
 
                 myAgent.send(msg);
-                System.out.println("AgenteAlarmado2: ¡Mensaje de emergencia enviado al Bombeiro!");
+                System.out.println("AgenteAlarmado2: ¡Mensaje de emergencia enviado al Bombero!");
             }
         });
 
