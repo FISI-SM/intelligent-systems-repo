@@ -4,7 +4,7 @@
  *
  * Compilar y ejecutar en Linux:
  * $ javac -d out -cp "../jade.jar" *.java
- * $ java -cp ".:../jade.jar:out" jade.Boot -agents 'Raul:Solicitante("fuego")'
+ * $ java -cp ".:../jade.jar:out" jade.Boot -agents 'soli:Solicitante(ladron); bomb:Bombero; pol:Policia; med:Medico'
  * 
  * Compilar en Windows:
  * $ javac -d out -cp "..\\jade.jar" *.java 
@@ -38,12 +38,12 @@ public class Solicitante extends Agent {
                 buscar(servicio, "fuego");
             }
 
-            // Si el argumento es "ladrón"
+            // Si el argumento es "ladron"
             if (argumento.equalsIgnoreCase("ladron")) {
                 ServiceDescription servicio = new ServiceDescription();
                 // El servicio es atrapar ladrones
-                servicio.setType("prende ladrón");
-                buscar(servicio, "ladrón");
+                servicio.setType("prende ladron");
+                buscar(servicio, "ladron");
             }
 
             // Si el argumento es "enfermo"
@@ -70,7 +70,7 @@ public class Solicitante extends Agent {
     // Método que realiza la búsqueda en las Páginas Amarillas (DF) de la plataforma
     protected void buscar(final ServiceDescription sd, final String pedido) {
         // Cada minuto intenta buscar agentes que ofrezcan el servicio
-        addBehaviour(new TickerBehaviour(this, 60000) {
+        addBehaviour(new TickerBehaviour(this, 5000) {
             protected void onTick() {
                 DFAgentDescription dfd = new DFAgentDescription();
                 dfd.addServices(sd);
