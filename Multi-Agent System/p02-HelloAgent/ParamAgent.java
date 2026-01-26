@@ -5,12 +5,16 @@
  * 		$ javac -cp .:../jade.jar ParamAgent.java
  * 		$ java -cp .:../jade.jar jade.Boot -agents 'fred:ParamAgent(3, "Allo there")'
  * 		$ java -cp .:../jade.jar jade.Boot -gui -agents 'fred:ParamAgent(3, "Allo there")'
- *   On Windows
+ *   On Windows (CMD)
  *   	$ javac -cp .;../jade.jar ParamAgent.java
  *   	$ java -cp .;../jade.jar jade.Boot -agents fred:ParamAgent(3,"Allo there")
  *   	$ java -cp .;../jade.jar jade.Boot -gui -agents fred:ParamAgent(3,"Allo there")
+ * 	Compile in Windows (PowerShell)
+ * 		$ javac -cp ".;..\jade.jar" .\ParamAgent.java
+ * 		$ java -cp ".;..\jade.jar" jade.Boot -agents 'fred:ParamAgent(3,"Allo there")' 
  * ------------------------------------------------------------
 **/
+
  import jade.core.Agent;
 
  public class ParamAgent extends Agent 

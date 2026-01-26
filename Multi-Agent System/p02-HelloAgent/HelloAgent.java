@@ -4,9 +4,12 @@
  * $ javac -cp .:../jade.jar HelloAgent.java
  * $ java -cp .:../jade.jar jade.Boot -agents "hello:HelloAgent" #without GUI
  * $ java -cp .:../jade.jar jade.Boot -gui -agents "hello:HelloAgent" #with GUI
- * Compile in Windows
+ * Compile in Windows (CMD)
  * $ javac -cp .;../jade.jar HelloAgent.java 
  * $ java -cp .;../jade.jar jade.Boot -agents "hello:HelloAgent"
+ * Compile in Windows (PowerShell)
+ * $ javac -cp ".;..\jade.jar" .\HelloAgent.java
+ * $ java -cp ".;..\jade.jar" jade.Boot -agents "hello:HelloAgent"
  * 
  **/
 

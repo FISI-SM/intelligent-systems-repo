@@ -41,3 +41,8 @@ Thumbs.db
 *.tmp
 *.swp
 *.bak
+
+# Archivos de JADE
+APDescription.txt
+MTPs-Main-Container.txt
+
