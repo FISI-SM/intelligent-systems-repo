@@ -5,7 +5,7 @@
  *               (OneShotBehaviour) envía "Fuego" al Bombero y otro
  *               (CyclicBehaviour) imprime las respuestas que recibe.
  *
- * Compilación (desde la carpeta p09-IntercambioMensages; compila todos los .java):
+ * Compilación (desde la carpeta p09-IntercambioMensajes; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:
@@ -55,7 +55,7 @@ public class AgenteAlarmado2 extends Agent {
             public void action() {
                 ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
                 msg.addReceiver(new AID("Bombero", AID.ISLOCALNAME));
-                msg.setLanguage("Portugués");
+                msg.setLanguage("Español");
                 msg.setOntology("Emergencia");
                 msg.setContent("Fuego");
 

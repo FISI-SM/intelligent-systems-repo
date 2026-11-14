@@ -4,7 +4,7 @@
  * Propósito:    Mostrar cómo un agente crea y envía un mensaje ACL de tipo
  *               INFORM, con contenido "Fuego", al agente llamado Bombero.
  *
- * Compilación (desde la carpeta p09-IntercambioMensages; compila todos los .java):
+ * Compilación (desde la carpeta p09-IntercambioMensajes; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:
@@ -58,7 +58,7 @@ public class AgenteAlarmado extends Agent {
                 msg.addReceiver(new AID("Bombero", AID.ISLOCALNAME));
 
                 // Define metadatos del mensaje
-                msg.setLanguage("Portugués");
+                msg.setLanguage("Español");
                 msg.setOntology("Emergencia");
 
                 // Define el contenido del mensaje

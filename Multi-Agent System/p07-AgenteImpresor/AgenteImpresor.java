@@ -1,10 +1,10 @@
 /*
- * Archivo:      AgenteImpressor.java
+ * Archivo:      AgenteImpresor.java
  *
  * Propósito:    Mostrar un agente que agrega el comportamiento ImprimeFrase
  *               con una pausa fija de 5000 ms entre impresiones.
  *
- * Compilación (desde la carpeta p07-AgenteImpressor; compila todos los .java):
+ * Compilación (desde la carpeta p07-AgenteImpresor; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:
@@ -14,11 +14,11 @@
  *
  * Ejecución:
  *    Linux / macOS (Intel y Apple Silicon M1):
- *       java -cp .:../jade.jar jade.Boot -agents "imp:AgenteImpressor"
+ *       java -cp .:../jade.jar jade.Boot -agents "imp:AgenteImpresor"
  *    Windows CMD:
- *       java -cp .;..\jade.jar jade.Boot -agents "imp:AgenteImpressor"
+ *       java -cp .;..\jade.jar jade.Boot -agents "imp:AgenteImpresor"
  *    Windows PowerShell:
- *       java -cp ".;..\jade.jar" jade.Boot -agents "imp:AgenteImpressor"
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "imp:AgenteImpresor"
  *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
  *
  * Entrada:      Ninguna.
@@ -29,7 +29,7 @@
  *
  * Notas:
  *    1. Compile con *.java: el agente usa ImprimeFrase.java.
- *    2. AgenteImpressorArgs.java es la misma idea, pero la pausa llega como
+ *    2. AgenteImpresorArgs.java es la misma idea, pero la pausa llega como
  *       argumento.
  *    3. La plataforma JADE sigue activa después del agente; deténgala con
  *       Ctrl+C.
@@ -44,7 +44,7 @@
 
 import jade.core.Agent;
 
-public class AgenteImpressor extends Agent {
+public class AgenteImpresor extends Agent {
 
     protected void setup() {
         System.out.println("¡Hola! Soy un agente impresor!"); 

@@ -75,7 +75,7 @@ public class Solicitante extends Agent {
             if (argumento.equalsIgnoreCase("ladron")) {
                 ServiceDescription servicio = new ServiceDescription();
                 // El servicio es atrapar ladrones
-                servicio.setType("prende ladron");
+                servicio.setType("atrapa ladron");
                 buscar(servicio, "ladron");
             }
 

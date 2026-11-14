@@ -1,10 +1,10 @@
 /*
- * Archivo:      AgenteImpressorArgs.java
+ * Archivo:      AgenteImpresorArgs.java
  *
  * Propósito:    Mostrar un agente que recibe como argumento la pausa (en ms)
  *               del comportamiento ImprimeFrase.
  *
- * Compilación (desde la carpeta p07-AgenteImpressor; compila todos los .java):
+ * Compilación (desde la carpeta p07-AgenteImpresor; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:
@@ -14,11 +14,11 @@
  *
  * Ejecución:
  *    Linux / macOS (Intel y Apple Silicon M1):
- *       java -cp .:../jade.jar jade.Boot -agents "imp:AgenteImpressorArgs(1000)"
+ *       java -cp .:../jade.jar jade.Boot -agents "imp:AgenteImpresorArgs(1000)"
  *    Windows CMD:
- *       java -cp .;..\jade.jar jade.Boot -agents "imp:AgenteImpressorArgs(1000)"
+ *       java -cp .;..\jade.jar jade.Boot -agents "imp:AgenteImpresorArgs(1000)"
  *    Windows PowerShell:
- *       java -cp ".;..\jade.jar" jade.Boot -agents "imp:AgenteImpressorArgs(1000)"
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "imp:AgenteImpresorArgs(1000)"
  *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
  *    Con 1000 ms la ejecución tarda unos 9 segundos.
  *
@@ -47,7 +47,7 @@
 import jade.core.Agent;
 import jade.core.*;
 
-public class AgenteImpressorArgs extends Agent {
+public class AgenteImpresorArgs extends Agent {
     protected void setup() {
         Object[] args = getArguments();
         if (args != null && args.length > 0) {

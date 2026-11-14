@@ -1,5 +1,5 @@
 /*
- * Archivo:      AgenteEstoque.java
+ * Archivo:      AgenteInventario.java
  *
  * Propósito:    Mostrar cómo un agente envía objetos Java serializables en
  *               mensajes ACL con setContentObject(): envía 5 objetos Musicos
@@ -15,11 +15,11 @@
  *
  * Ejecución:
  *    Linux / macOS (Intel y Apple Silicon M1):
- *       java -cp .:../jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp .:../jade.jar jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Windows CMD:
- *       java -cp .;..\jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp .;..\jade.jar jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Windows PowerShell:
- *       java -cp ".;..\jade.jar" jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
  *
  * Entrada:      Ninguna.
@@ -28,8 +28,7 @@
  *               los imprime AgenteContador.
  *
  * Notas:
- *    1. Basado en el Código 3.8 del material original (Estoque = inventario en
- *       portugués).
+ *    1. Basado en el Código 3.8 del material original.
  *    2. done() devuelve true después de 5 envíos y llama a doDelete().
  *    3. La plataforma JADE sigue activa después del agente; deténgala con
  *       Ctrl+C.
@@ -48,7 +47,7 @@ import jade.lang.acl.ACLMessage;
 import jade.core.AID;
 import java.io.IOException;
 
-public class AgenteEstoque extends Agent {
+public class AgenteInventario extends Agent {
     Musicos[] mus = new Musicos[5];
 
     protected void setup() {

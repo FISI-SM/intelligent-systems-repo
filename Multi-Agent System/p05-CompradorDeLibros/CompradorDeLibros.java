@@ -5,7 +5,7 @@
  *               argumento de inicialización y que se elimina a sí mismo
  *               (doDelete) si no lo recibe.
  *
- * Compilación (desde la carpeta p05-CompradorDeLivros; compila todos los .java):
+ * Compilación (desde la carpeta p05-CompradorDeLibros; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:
@@ -39,15 +39,13 @@
  *       luego llama a takeDown().
  *    2. El título puede tener espacios; no use comillas dentro de los
  *       paréntesis.
- *    3. La carpeta se llama CompradorDeLivros (portugués); la clase,
- *       CompradorDeLibros.
- *    4. La plataforma JADE sigue activa después del agente; deténgala con
+ *    3. La plataforma JADE sigue activa después del agente; deténgala con
  *       Ctrl+C.
- *    5. El separador del classpath es ':' en Linux/macOS y ';' en Windows. En
+ *    4. El separador del classpath es ':' en Linux/macOS y ';' en Windows. En
  *       PowerShell el classpath va entre comillas, porque ';' separa comandos.
- *    6. -encoding UTF-8 evita errores con tildes y ñ al compilar en Windows
+ *    5. -encoding UTF-8 evita errores con tildes y ñ al compilar en Windows
  *       con JDK 17 o anterior.
- *    7. En Mac M1 use un JDK nativo arm64 (por ejemplo, Temurin aarch64). JADE
+ *    6. En Mac M1 use un JDK nativo arm64 (por ejemplo, Temurin aarch64). JADE
  *       es Java puro y no necesita nada especial. Probado con JDK 17 y JADE
  *       4.5.0.
  */

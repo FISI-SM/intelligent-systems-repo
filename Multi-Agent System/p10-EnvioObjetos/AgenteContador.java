@@ -14,22 +14,24 @@
  *
  * Ejecución:
  *    Linux / macOS (Intel y Apple Silicon M1):
- *       java -cp .:../jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp .:../jade.jar jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Windows CMD:
- *       java -cp .;..\jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp .;..\jade.jar jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Windows PowerShell:
- *       java -cp ".;..\jade.jar" jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "Contador:AgenteContador;Inventario:AgenteInventario"
  *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
  *
  * Entrada:      Mensajes ACL con objetos Musicos.
  *
  * Salida:       "Agente Contador inicializado.", "Esperando información..." y
  *               los datos (nombre, edad, banda) de los 5 músicos que envía
- *               AgenteEstoque.
+ *               AgenteInventario.
  *
  * Notas:
- *    1. El nombre local debe ser Contador: AgenteEstoque envía a ese nombre.
- *    2. Inicie Contador antes que Estoque en -agents (el orden de la lista).
+ *    1. El nombre local debe ser Contador: AgenteInventario envía a ese
+ *       nombre.
+ *    2. Inicie Contador antes que Inventario en -agents (el orden de la
+ *       lista).
  *    3. El arreglo tiene 5 posiciones; un sexto objeto causaría una excepción
  *       y el contador volvería a 0.
  *    4. La plataforma JADE sigue activa después del agente; deténgala con

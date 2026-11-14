@@ -1,7 +1,7 @@
 /*
  * Archivo:      Policia.java
  *
- * Propósito:    Mostrar un agente proveedor que registra el servicio "prende
+ * Propósito:    Mostrar un agente proveedor que registra el servicio "atrapa
  *               ladron" en las Páginas Amarillas (DF) y responde "Voy a
  *               atrapar al ladron" cuando recibe el mensaje "ladron".
  *
@@ -38,7 +38,7 @@ public class Policia extends Agent {
         // Descripción del servicio
         ServiceDescription servicio = new ServiceDescription();
         // Su servicio es atrapar ladrones
-        servicio.setType("prende ladron");
+        servicio.setType("atrapa ladron");
         servicio.setName(this.getLocalName());
 
         registrarServicio(servicio);

@@ -5,7 +5,7 @@
  *               createReply(): cuando recibe "Fuego", agradece al remitente y
  *               avisa que combatirá el incendio.
  *
- * Compilación (desde la carpeta p09-IntercambioMensages; compila todos los .java):
+ * Compilación (desde la carpeta p09-IntercambioMensajes; compila todos los .java):
  *    Linux / macOS (Intel y Apple Silicon M1):
  *       javac -encoding UTF-8 -cp ../jade.jar *.java
  *    Windows CMD:

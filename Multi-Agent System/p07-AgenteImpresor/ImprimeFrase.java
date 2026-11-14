@@ -5,8 +5,8 @@
  *               y el nombre de su agente, con una pausa entre impresiones, y
  *               termina después de 10 ejecuciones.
  *
- * Compilación:  No se ejecuta solo. Se compila junto con AgenteImpressor.java o AgenteImpressorArgs.java
- *               (javac ... *.java). Vea los comandos en AgenteImpressor.java o AgenteImpressorArgs.java.
+ * Compilación:  No se ejecuta solo. Se compila junto con AgenteImpresor.java o AgenteImpresorArgs.java
+ *               (javac ... *.java). Vea los comandos en AgenteImpresor.java o AgenteImpresorArgs.java.
  *
  * Entrada:      El agente dueño y la pausa en milisegundos (constructor).
  *
@@ -26,9 +26,9 @@ import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
 
 public class ImprimeFrase extends Behaviour {
-    int numExecucao = 1;
+    int numEjecucion = 1;
     long delay;
-    long tempoInicial = System.currentTimeMillis();
+    long tiempoInicial = System.currentTimeMillis();
     
     public ImprimeFrase(Agent a, long delay) {
         super(a);
@@ -37,14 +37,14 @@ public class ImprimeFrase extends Behaviour {
 
     public void action() {
         block(delay); // pausa la ejecución del comportamiento por el tiempo indicado (en milisegundos)
-        System.out.println("& Tiempo " + (System.currentTimeMillis() - tempoInicial) 
+        System.out.println("& Tiempo " + (System.currentTimeMillis() - tiempoInicial) 
                            + ": Mi nombre es " + myAgent.getLocalName());
-        numExecucao = numExecucao + 1;
+        numEjecucion = numEjecucion + 1;
     }
 
     public boolean done() {
         // el comportamiento terminará cuando se haya ejecutado más de 10 veces
-        return numExecucao > 10;
+        return numEjecucion > 10;
     }
 
     public int onEnd() {
