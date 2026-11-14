@@ -1,4 +1,47 @@
-/** Código 3.8: AgenteEstoque.java */
+/*
+ * Archivo:      AgenteEstoque.java
+ *
+ * Propósito:    Mostrar cómo un agente envía objetos Java serializables en
+ *               mensajes ACL con setContentObject(): envía 5 objetos Musicos
+ *               al agente Contador y termina.
+ *
+ * Compilación (desde la carpeta p10-EnvioObjetos; compila todos los .java):
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       javac -encoding UTF-8 -cp ../jade.jar *.java
+ *    Windows CMD:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
+ *    Windows PowerShell:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
+ *
+ * Ejecución:
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       java -cp .:../jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *    Windows CMD:
+ *       java -cp .;..\jade.jar jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *    Windows PowerShell:
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "Contador:AgenteContador;Estoque:AgenteEstoque"
+ *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
+ *
+ * Entrada:      Ninguna.
+ *
+ * Salida:       "Toda la información fue enviada" (en takeDown()). Los datos
+ *               los imprime AgenteContador.
+ *
+ * Notas:
+ *    1. Basado en el Código 3.8 del material original (Estoque = inventario en
+ *       portugués).
+ *    2. done() devuelve true después de 5 envíos y llama a doDelete().
+ *    3. La plataforma JADE sigue activa después del agente; deténgala con
+ *       Ctrl+C.
+ *    4. El separador del classpath es ':' en Linux/macOS y ';' en Windows. En
+ *       PowerShell el classpath va entre comillas, porque ';' separa comandos.
+ *    5. -encoding UTF-8 evita errores con tildes y ñ al compilar en Windows
+ *       con JDK 17 o anterior.
+ *    6. En Mac M1 use un JDK nativo arm64 (por ejemplo, Temurin aarch64). JADE
+ *       es Java puro y no necesita nada especial. Probado con JDK 17 y JADE
+ *       4.5.0.
+ */
+
 import jade.core.Agent;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;

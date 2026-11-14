@@ -1,3 +1,23 @@
+/*
+ * Archivo:      Musicos.java
+ *
+ * Propósito:    Definir el objeto que viaja dentro de los mensajes: un músico
+ *               con nombre, edad y banda, y un método para imprimirlo.
+ *
+ * Compilación:  No se ejecuta solo. Se compila junto con AgenteEstoque.java y AgenteContador.java
+ *               (javac ... *.java). Vea los comandos en AgenteEstoque.java y AgenteContador.java.
+ *
+ * Entrada:      Nombre, edad y banda (constructor).
+ *
+ * Salida:       Imprimir() muestra los tres datos entre líneas de guiones.
+ *
+ * Notas:
+ *    1. Implementa jade.util.leap.Serializable para poder enviarse con
+ *       setContentObject().
+ *    2. Los atributos usan nombres en portugués (nome, idade) del material
+ *       original.
+ */
+
 import jade.util.leap.Serializable;
 
 /**

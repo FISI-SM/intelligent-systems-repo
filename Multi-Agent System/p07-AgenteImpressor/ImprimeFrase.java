@@ -1,3 +1,27 @@
+/*
+ * Archivo:      ImprimeFrase.java
+ *
+ * Propósito:    Definir un comportamiento que imprime el tiempo transcurrido
+ *               y el nombre de su agente, con una pausa entre impresiones, y
+ *               termina después de 10 ejecuciones.
+ *
+ * Compilación:  No se ejecuta solo. Se compila junto con AgenteImpressor.java o AgenteImpressorArgs.java
+ *               (javac ... *.java). Vea los comandos en AgenteImpressor.java o AgenteImpressorArgs.java.
+ *
+ * Entrada:      El agente dueño y la pausa en milisegundos (constructor).
+ *
+ * Salida:       Líneas "& Tiempo <ms>: Mi nombre es <agente>" y, al terminar,
+ *               "<agente>: ¡Mi comportamiento fue finalizado! ¡Hasta
+ *               luego...".
+ *
+ * Notas:
+ *    1. block(delay) no detiene el programa: suspende este comportamiento
+ *       hasta que pase el tiempo o llegue un mensaje.
+ *    2. action() continúa después de block(); por eso la primera línea sale en
+ *       ~0 ms y la pausa se nota desde la segunda.
+ *    3. onEnd() se ejecuta una vez, cuando done() devuelve true.
+ */
+
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
 

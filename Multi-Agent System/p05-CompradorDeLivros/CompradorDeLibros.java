@@ -1,24 +1,55 @@
-/**
- * ------------------------------------------------------------
- *   CompradorDeLibros: Ejemplo de agente que recibe un libro
- *                      como argumento en su inicialización
+/*
+ * Archivo:      CompradorDeLibros.java
  *
- *   Compilar en Windows:
- *   $ javac -cp .;../jade.jar CompradorDeLibros.java
+ * Propósito:    Mostrar un agente que recibe el título de un libro como
+ *               argumento de inicialización y que se elimina a sí mismo
+ *               (doDelete) si no lo recibe.
  *
- *   Compilar en Linux/Mac:
- *   $ javac -cp .:../jade.jar CompradorDeLibros.java
+ * Compilación (desde la carpeta p05-CompradorDeLivros; compila todos los .java):
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       javac -encoding UTF-8 -cp ../jade.jar *.java
+ *    Windows CMD:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
+ *    Windows PowerShell:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
  *
- *   Ejecutar en Linux/Mac:
- *   $ java -cp .:../jade.jar jade.Boot -name plataforma-de-prueba Jose:CompradorDeLibros("El-principito")
+ * Ejecución:
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       java -cp .:../jade.jar jade.Boot -agents "Jose:CompradorDeLibros(El principito)"
+ *       java -cp .:../jade.jar jade.Boot -agents "Jose:CompradorDeLibros"
+ *    Windows CMD:
+ *       java -cp .;..\jade.jar jade.Boot -agents "Jose:CompradorDeLibros(El principito)"
+ *       java -cp .;..\jade.jar jade.Boot -agents "Jose:CompradorDeLibros"
+ *    Windows PowerShell:
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "Jose:CompradorDeLibros(El principito)"
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "Jose:CompradorDeLibros"
+ *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
+ *    Con argumento: el agente sigue vivo.
+ *    Sin argumento: el agente termina y ejecuta takeDown().
  *
- *   Ejecutar en Windows (CMD o PowerShell):
- *   $ java -cp .;../jade.jar jade.Boot -name plataforma-de-prueba Jose:CompradorDeLibros("El-principito")
+ * Entrada:      Opcional: el título del libro entre paréntesis.
  *
- *   Nota:
- *   - En Linux/Mac el separador de classpath es ":".
- *   - En Windows el separador de classpath es ";".
- * ------------------------------------------------------------
+ * Salida:       Con argumento: el saludo y "Pretendo comprar el libro: El
+ *               principito". Sin argumento: el saludo, "¡No tengo libros para
+ *               comprar!" y "El agente comprador Jose@<host>:1099/JADE ha
+ *               finalizado."
+ *
+ * Notas:
+ *    1. doDelete() no detiene el agente al instante: JADE termina setup() y
+ *       luego llama a takeDown().
+ *    2. El título puede tener espacios; no use comillas dentro de los
+ *       paréntesis.
+ *    3. La carpeta se llama CompradorDeLivros (portugués); la clase,
+ *       CompradorDeLibros.
+ *    4. La plataforma JADE sigue activa después del agente; deténgala con
+ *       Ctrl+C.
+ *    5. El separador del classpath es ':' en Linux/macOS y ';' en Windows. En
+ *       PowerShell el classpath va entre comillas, porque ';' separa comandos.
+ *    6. -encoding UTF-8 evita errores con tildes y ñ al compilar en Windows
+ *       con JDK 17 o anterior.
+ *    7. En Mac M1 use un JDK nativo arm64 (por ejemplo, Temurin aarch64). JADE
+ *       es Java puro y no necesita nada especial. Probado con JDK 17 y JADE
+ *       4.5.0.
  */
 
 import jade.core.Agent;

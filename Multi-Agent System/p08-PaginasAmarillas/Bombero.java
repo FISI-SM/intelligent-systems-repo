@@ -1,3 +1,29 @@
+/*
+ * Archivo:      Bombero.java
+ *
+ * Propósito:    Mostrar un agente proveedor que registra el servicio "apaga
+ *               fuego" en las Páginas Amarillas (DF) y responde "Voy a apagar
+ *               el incendio" cuando recibe el mensaje "fuego".
+ *
+ * Compilación:  No se ejecuta solo. Se compila junto con Solicitante.java
+ *               (javac ... *.java). Vea los comandos en Solicitante.java.
+ *               Se inicia junto con el Solicitante en el mismo -agents.
+ *
+ * Entrada:      Mensajes ACL de otros agentes; reacciona solo al contenido
+ *               "fuego".
+ *
+ * Salida:       No imprime nada; envía la respuesta "Voy a apagar el
+ *               incendio" al remitente.
+ *
+ * Notas:
+ *    1. DFService.register publica el servicio; el Solicitante lo encuentra
+ *       con DFService.search.
+ *    2. Bombero, Medico y Policia solo cambian el tipo de servicio, el pedido
+ *       y la respuesta.
+ *    3. Si deja la plataforma activa, el registro sigue en el DF hasta que el
+ *       agente termina.
+ */
+
 import jade.core.Agent;
 import jade.core.behaviours.*;
 import jade.core.AID;

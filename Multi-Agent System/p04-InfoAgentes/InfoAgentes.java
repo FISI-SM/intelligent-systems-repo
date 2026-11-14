@@ -1,22 +1,49 @@
-/**
- * ------------------------------------------------------------
- *   InfoAgentes: Ejemplo para mostrar información del agente
+/*
+ * Archivo:      InfoAgentes.java
  *
- *   Compilar en Windows:
- *   $ javac -cp .;../jade.jar InfoAgentes.java
+ * Propósito:    Mostrar la identidad de un agente JADE (AID): su nombre
+ *               local, su nombre global (GUID) y sus direcciones de
+ *               transporte.
  *
- *   Compilar en Linux/Mac:
- *   $ javac -cp .:../jade.jar InfoAgentes.java
+ * Compilación (desde la carpeta p04-InfoAgentes; compila todos los .java):
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       javac -encoding UTF-8 -cp ../jade.jar *.java
+ *    Windows CMD:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
+ *    Windows PowerShell:
+ *       javac -encoding UTF-8 -cp ..\jade.jar *.java
  *
- *   Ejecutar en Linux/Mac:
- *   $ java -cp .:../jade.jar jade.Boot -gui tuto:InfoAgentes
- *   $ java -cp .:../jade.jar jade.Boot -name plataforma-de-prueba Ivan:InfoAgentes
+ * Ejecución:
+ *    Linux / macOS (Intel y Apple Silicon M1):
+ *       java -cp .:../jade.jar jade.Boot -agents "tuto:InfoAgentes"
+ *    Windows CMD:
+ *       java -cp .;..\jade.jar jade.Boot -agents "tuto:InfoAgentes"
+ *    Windows PowerShell:
+ *       java -cp ".;..\jade.jar" jade.Boot -agents "tuto:InfoAgentes"
+ *    Para abrir la interfaz gráfica de JADE, agregue -gui antes de -agents.
+ *    Con -name plataforma-de-prueba antes de -agents, el GUID cambia de
+ *    tuto@<host>:1099/JADE a tuto@plataforma-de-prueba.
  *
- *   Ejecutar en Windows (CMD o PowerShell):
- *   $ java -cp .;../jade.jar jade.Boot -gui tuto:InfoAgentes
- *   $ java -cp .;../jade.jar jade.Boot -name plataforma-de-prueba Ivan:InfoAgentes
+ * Entrada:      Ninguna.
  *
- * ------------------------------------------------------------
+ * Salida:       El AID completo, "Mi nombre local es tuto", "Mi nombre global
+ *               (GUID) es tuto@<host>:1099/JADE" y la lista de direcciones
+ *               (por ejemplo, http://<host>:7778/acc).
+ *
+ * Notas:
+ *    1. El nombre local es único dentro de la plataforma; el GUID es único
+ *       entre plataformas: nombre-local@nombre-de-la-plataforma.
+ *    2. Las direcciones dependen de la red de la máquina, por eso cambian
+ *       entre computadoras.
+ *    3. La plataforma JADE sigue activa después del agente; deténgala con
+ *       Ctrl+C.
+ *    4. El separador del classpath es ':' en Linux/macOS y ';' en Windows. En
+ *       PowerShell el classpath va entre comillas, porque ';' separa comandos.
+ *    5. -encoding UTF-8 evita errores con tildes y ñ al compilar en Windows
+ *       con JDK 17 o anterior.
+ *    6. En Mac M1 use un JDK nativo arm64 (por ejemplo, Temurin aarch64). JADE
+ *       es Java puro y no necesita nada especial. Probado con JDK 17 y JADE
+ *       4.5.0.
  */
 
 import jade.core.Agent;
