@@ -5,10 +5,11 @@ Propósito:    Conectar un agente LLM (Claude) al servidor MCP de la biblioteca
               (p04). El agente no tiene herramientas propias: las descubre en
               el servidor MCP al iniciar y las usa para atender al alumno.
 
-Ejecución (con el entorno virtual activado, desde la carpeta p05-AgenteConMCP;
+Ejecución (con Poetry, desde la carpeta p05-AgenteConMCP;
 igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple Silicon M1):
-       python agente_con_mcp.py
-       python agente_con_mcp.py "Soy 20231045. ¿Puedo llevarme Sistemas Multiagente?"
+       poetry run python agente_con_mcp.py
+       poetry run python agente_con_mcp.py "Soy 20231045. ¿Puedo llevarme Sistemas Multiagente?"
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: el pedido del alumno entre comillas.
 

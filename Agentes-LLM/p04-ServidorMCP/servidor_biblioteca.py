@@ -8,8 +8,9 @@ Propósito:    Crear un servidor MCP (Model Context Protocol) para la biblioteca
               puede conectarse y usarlas sin conocer este código.
 
 Ejecución:    No se ejecuta solo: lo inicia un cliente MCP por stdio.
-              Para probarlo sin LLM (desde esta carpeta, entorno activado):
-                     python cliente_prueba.py
+              Para probarlo sin LLM (desde esta carpeta):
+                     poetry run python cliente_prueba.py
+                     Sin Poetry: active el entorno virtual y omita "poetry run".
               Para usarlo con un agente LLM: vea p05-AgenteConMCP.
 
 Entrada:      Pedidos MCP del cliente (listar herramientas, llamar una

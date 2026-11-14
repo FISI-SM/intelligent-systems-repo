@@ -6,11 +6,12 @@ Propósito:    Agente coordinador de emergencias. Descubre a los especialistas
               de JADE), y usa un LLM para decidir a quién enviar cada parte
               del aviso. Envía las tareas por A2A y resume las respuestas.
 
-Ejecución (con agentes_emergencia.py ya corriendo en otra terminal; entorno
-activado; igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple
+Ejecución (con agentes_emergencia.py ya corriendo en otra terminal;
+igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple
 Silicon M1):
-       python coordinador.py
-       python coordinador.py "Choque en la Av. Venezuela, un conductor herido"
+       poetry run python coordinador.py
+       poetry run python coordinador.py "Choque en la Av. Venezuela, un conductor herido"
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: el aviso de emergencia entre comillas.
 

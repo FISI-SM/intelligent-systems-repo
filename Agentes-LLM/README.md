@@ -35,22 +35,47 @@ Cada archivo empieza con un comentario que explica su propósito, cómo ejecutar
 
 Necesita **Python 3.10 o superior** y una **clave de API de Claude** (https://platform.claude.com, sección API Keys). Todos los comandos se escriben **desde esta carpeta** (`Agentes-LLM`).
 
-### 1. Crear el entorno virtual
+El proyecto usa **Poetry** para instalar las dependencias (archivo `pyproject.toml`, versiones exactas en `poetry.lock`). Si no puede instalar Poetry, use la opción B.
+
+### Opción A (recomendada): Poetry
+
+**1. Instalar Poetry** (solo la primera vez en su computadora):
 
 | Sistema | Comando |
 |---|---|
-| Windows (CMD o PowerShell) | `py -m venv .venv` |
-| Linux / macOS (Intel y Apple Silicon M1) | `python3 -m venv .venv` |
+| Windows (PowerShell) | `(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content \| py -` |
+| Linux / macOS (Intel y Apple Silicon M1) | `curl -sSL https://install.python-poetry.org \| python3 -` |
+| macOS con Homebrew | `brew install poetry` |
 
-### 2. Activar el entorno virtual
+En Windows, si después `poetry` no se reconoce, agregue `%APPDATA%\Python\Scripts` a la variable de entorno `Path` y abra una terminal nueva. Compruebe con `poetry --version`.
 
-Hágalo **cada vez** que abra una terminal nueva. Al activarlo, la línea de comandos empieza con `(.venv)`.
+**2. Instalar las dependencias** (igual en Windows CMD, PowerShell, Linux y macOS):
 
-| Sistema | Comando |
-|---|---|
-| Windows CMD | `.venv\Scripts\activate.bat` |
-| Windows PowerShell | `.venv\Scripts\Activate.ps1` |
-| Linux / macOS | `source .venv/bin/activate` |
+```
+poetry install
+```
+
+Poetry crea el entorno virtual en la carpeta `.venv` (configurado en `poetry.toml`) e instala las versiones exactas de `poetry.lock`.
+
+**3. Guardar la clave de API**: vea el paso "Clave de API" más abajo.
+
+**4. Ejecutar un ejemplo** con `poetry run` (no hace falta activar nada):
+
+```
+cd p02-BucleDelAgente
+poetry run python bucle_del_agente.py
+poetry run python bucle_del_agente.py "¿Me alcanza el stock para 4 mouse?"
+```
+
+### Opción B: pip y entorno virtual (sin Poetry)
+
+| Paso | Windows CMD | Windows PowerShell | Linux / macOS |
+|---|---|---|---|
+| 1. Crear el entorno | `py -m venv .venv` | `py -m venv .venv` | `python3 -m venv .venv` |
+| 2. Activarlo (cada vez que abre una terminal) | `.venv\Scripts\activate.bat` | `.venv\Scripts\Activate.ps1` | `source .venv/bin/activate` |
+| 3. Instalar | `pip install -r requirements.txt` | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
+
+Con el entorno activado (la línea de comandos empieza con `(.venv)`), ejecute los ejemplos **sin** `poetry run`: `python bucle_del_agente.py`.
 
 Si PowerShell dice que la ejecución de scripts está deshabilitada, ejecute primero (solo afecta a esa ventana):
 
@@ -58,15 +83,7 @@ Si PowerShell dice que la ejecución de scripts está deshabilitada, ejecute pri
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
-### 3. Instalar las dependencias
-
-Con el entorno activado (igual en todos los sistemas):
-
-```
-pip install -r requirements.txt
-```
-
-### 4. Guardar la clave de API
+### Clave de API (ambas opciones)
 
 Copie `.env.example` como `.env` y pegue su clave en lugar de `pegue-aqui-su-clave`.
 
@@ -80,15 +97,11 @@ El archivo `.env` está en `.gitignore`: **nunca suba su clave a GitHub**.
 
 ## Ejecutar un ejemplo
 
-Con el entorno activado, entre a la carpeta del ejemplo y ejecute el archivo con `python` (dentro del entorno virtual, `python` funciona igual en Windows, Linux y macOS):
+Entre a la carpeta del ejemplo y ejecute el archivo con `poetry run python` (opción A) o con `python` y el entorno activado (opción B). Cada archivo indica su comando exacto en el comentario inicial.
 
-```
-cd p02-BucleDelAgente
-python bucle_del_agente.py
-python bucle_del_agente.py "¿Me alcanza el stock para 4 mouse?"
-```
+Los ejemplos p06 y p07 necesitan **dos terminales**: en la primera se inicia el agente (servidor) y en la segunda el cliente. Con la opción B, active el entorno virtual en ambas.
 
-Los ejemplos p06 y p07 necesitan **dos terminales**: en la primera se inicia el agente (servidor) y en la segunda el cliente. Active el entorno virtual en ambas.
+Para agregar una biblioteca nueva al proyecto use `poetry add nombre-de-la-biblioteca` (actualiza `pyproject.toml` y `poetry.lock`).
 
 ## Bibliotecas usadas
 
@@ -116,7 +129,8 @@ Los ejemplos activan `fallbacks`: si el modelo rechaza una solicitud por segurid
 | Mensaje | Solución |
 |---|---|
 | `Clave de API inválida o ausente` | Revise que `.env` exista en la carpeta `Agentes-LLM` y que la clave esté bien copiada |
-| `ModuleNotFoundError: No module named 'anthropic'` | Active el entorno virtual e instale `requirements.txt` |
+| `ModuleNotFoundError: No module named 'anthropic'` | Ejecute con `poetry run python ...` (opción A) o active el entorno virtual (opción B) |
+| `poetry: command not found` / no se reconoce `poetry` | Instale Poetry (opción A, paso 1) y abra una terminal nueva; o use la opción B |
 | `No se pudo conectar con http://127.0.0.1:9001` | Inicie primero el agente (p06: `agente_a2a.py`; p07: `agentes_emergencia.py`) en otra terminal |
 | `address already in use` / puerto ocupado | Ya hay un agente corriendo en ese puerto: ciérrelo con Ctrl+C |
 | `No module named 'mcp.server.fastmcp'` | Está usando código de mcp 1.x; use `MCPServer` (vea arriba) |

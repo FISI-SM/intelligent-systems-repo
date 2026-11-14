@@ -6,11 +6,12 @@ Propósito:    Publicar un agente LLM con el protocolo A2A (Agent2Agent). El
               algoritmos. Otros agentes lo descubren leyendo su Agent Card y
               le envían tareas por HTTP (JSON-RPC).
 
-Ejecución (con el entorno virtual activado, desde la carpeta p06-AgenteA2A;
+Ejecución (con Poetry, desde la carpeta p06-AgenteA2A;
 igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple Silicon M1):
-       python agente_a2a.py
-       Luego, en OTRA terminal (también con el entorno activado):
-       python cliente_a2a.py
+       poetry run python agente_a2a.py
+       Luego, en OTRA terminal:
+       poetry run python cliente_a2a.py
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
        Para ver la Agent Card en el navegador:
        http://127.0.0.1:9001/.well-known/agent-card.json
 

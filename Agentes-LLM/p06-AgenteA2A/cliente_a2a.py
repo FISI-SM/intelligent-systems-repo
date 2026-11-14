@@ -5,10 +5,11 @@ Propósito:    Actuar como cliente A2A: descubrir al "Tutor de Algoritmos"
               leyendo su Agent Card, enviarle una tarea y seguir sus cambios
               de estado hasta recibir el resultado.
 
-Ejecución (con agente_a2a.py ya corriendo en otra terminal; entorno activado;
+Ejecución (con agente_a2a.py ya corriendo en otra terminal;
 igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple Silicon M1):
-       python cliente_a2a.py
-       python cliente_a2a.py "¿Qué es la programación dinámica?"
+       poetry run python cliente_a2a.py
+       poetry run python cliente_a2a.py "¿Qué es la programación dinámica?"
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: la pregunta entre comillas.
 

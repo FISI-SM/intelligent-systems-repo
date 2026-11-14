@@ -7,10 +7,11 @@ Propósito:    Mostrar el bucle de un agente escrito a mano: el LLM piensa,
               El agente atiende una tienda con dos herramientas: consultar el
               stock y calcular el precio de una compra.
 
-Ejecución (con el entorno virtual activado; igual en Windows CMD, PowerShell,
+Ejecución (con Poetry; igual en Windows CMD, PowerShell,
 Linux y macOS, incluido Apple Silicon M1):
-       python bucle_del_agente.py
-       python bucle_del_agente.py "¿Me alcanza el stock para 4 mouse?"
+       poetry run python bucle_del_agente.py
+       poetry run python bucle_del_agente.py "¿Me alcanza el stock para 4 mouse?"
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: un pedido del cliente entre comillas.
 

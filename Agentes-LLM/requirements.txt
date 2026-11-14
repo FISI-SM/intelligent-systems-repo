@@ -1,5 +1,6 @@
 # Dependencias de los ejemplos de Agentes-LLM (versiones probadas el 2026-11-13).
-# Instalar con:  pip install -r requirements.txt
+# Opción B del README (sin Poetry). Instalar con:  pip install -r requirements.txt
+# Mantenga estas versiones iguales a las de pyproject.toml.
 anthropic[mcp]==2.8.0        # SDK de Claude (incluye el puente con MCP)
 mcp==2.3.0                   # SDK oficial del Model Context Protocol
 a2a-sdk[http-server]==1.3.0  # SDK oficial del protocolo Agent2Agent

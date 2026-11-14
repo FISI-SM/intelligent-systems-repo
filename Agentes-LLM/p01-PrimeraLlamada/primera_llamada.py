@@ -5,10 +5,11 @@ Propósito:    Hacer una sola llamada a un LLM (Claude) y mostrar su respuesta.
               Sirve para ver la diferencia entre un LLM y un agente: aquí el
               modelo solo responde texto; no usa herramientas ni actúa.
 
-Ejecución (con el entorno virtual activado; igual en Windows CMD, PowerShell,
+Ejecución (con Poetry; igual en Windows CMD, PowerShell,
 Linux y macOS, incluido Apple Silicon M1):
-       python primera_llamada.py
-       python primera_llamada.py "¿Qué es un agente de software?"
+       poetry run python primera_llamada.py
+       poetry run python primera_llamada.py "¿Qué es un agente de software?"
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: una pregunta entre comillas. Sin argumento usa una
               pregunta de ejemplo.

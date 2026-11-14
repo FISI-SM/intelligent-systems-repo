@@ -6,12 +6,13 @@ Propósito:    Iniciar tres agentes especialistas A2A (Bombero, Policía y
               Es la versión moderna del laboratorio p08-PaginasAmarillas de
               JADE: cada agente publica su "servicio" en su Agent Card.
 
-Ejecución (con el entorno virtual activado, desde la carpeta
+Ejecución (con Poetry, desde la carpeta
 p07-SistemaMultiagente; igual en Windows CMD, PowerShell, Linux y macOS,
 incluido Apple Silicon M1):
-       python agentes_emergencia.py
-       Luego, en OTRA terminal (también con el entorno activado):
-       python coordinador.py
+       poetry run python agentes_emergencia.py
+       Luego, en OTRA terminal:
+       poetry run python coordinador.py
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Tareas A2A enviadas por el coordinador.
 

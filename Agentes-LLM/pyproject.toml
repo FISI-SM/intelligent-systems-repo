@@ -1,0 +1,22 @@
+[project]
+name = "agentes-llm"
+version = "1.0.0"
+description = "Ejemplos de agentes LLM con MCP y A2A para el curso Innovación Disruptiva y Transformación Digital (FISI-UNMSM)"
+authors = [{ name = "Herminio Paucar Curasma" }]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "anthropic[mcp] (==2.8.0)",        # SDK de Claude (incluye el puente con MCP)
+    "mcp (==2.3.0)",                   # SDK oficial del Model Context Protocol
+    "a2a-sdk[http-server] (==1.3.0)",  # SDK oficial del protocolo Agent2Agent
+    "uvicorn (==0.54.0)",              # servidor web para los agentes A2A
+    "httpx (==0.28.1)",                # cliente HTTP para hablar con agentes A2A
+    "python-dotenv (==1.2.4)",         # lee la clave de API desde el archivo .env
+]
+
+[tool.poetry]
+package-mode = false  # son ejemplos para ejecutar, no una biblioteca para instalar
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

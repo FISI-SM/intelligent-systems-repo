@@ -7,10 +7,11 @@ Propósito:    Construir el mismo agente vendedor de p02, pero dejando que el
               genera su descripción JSON a partir del nombre, los tipos y el
               docstring.
 
-Ejecución (con el entorno virtual activado; igual en Windows CMD, PowerShell,
+Ejecución (con Poetry; igual en Windows CMD, PowerShell,
 Linux y macOS, incluido Apple Silicon M1):
-       python tool_runner.py
-       python tool_runner.py "¿Tienen monitores? Necesito 2."
+       poetry run python tool_runner.py
+       poetry run python tool_runner.py "¿Tienen monitores? Necesito 2."
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Opcional: un pedido del cliente entre comillas.
 

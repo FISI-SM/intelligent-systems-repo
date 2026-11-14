@@ -6,9 +6,10 @@ Propósito:    Probar el servidor MCP de la biblioteca SIN usar un LLM: se
               directamente. Muestra que MCP es un protocolo estándar entre
               programas; el LLM es solo un cliente más.
 
-Ejecución (con el entorno virtual activado, desde la carpeta p04-ServidorMCP;
+Ejecución (con Poetry, desde la carpeta p04-ServidorMCP;
 igual en Windows CMD, PowerShell, Linux y macOS, incluido Apple Silicon M1):
-       python cliente_prueba.py
+       poetry run python cliente_prueba.py
+       Sin Poetry: active el entorno virtual y omita "poetry run" (vea el README).
 
 Entrada:      Ninguna.
 
